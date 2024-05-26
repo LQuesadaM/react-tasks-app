@@ -22,10 +22,14 @@ export const App = () => {
     ])
   }
 
+  const deleteTask = (taskId) => {
+    setTasks(tasks.filter((task) => task.id !== taskId))
+  }
+
   return (
     <>
       <TaskForm createTask={createTask} />
-      <TaskList tasks={tasks} />
+      <TaskList tasks={tasks} deleteTask={deleteTask} />
     </>
   )
 }
