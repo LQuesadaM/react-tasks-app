@@ -1,3 +1,6 @@
+import { useContext } from 'react'
+import { TaskContext } from '../context/Context.jsx'
+
 export const TaskCard = ({ task, deleteTask }) => {
   return (
     <div>

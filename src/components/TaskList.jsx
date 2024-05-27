@@ -1,6 +1,10 @@
-import { TaskCard } from './TaskCard'
+import { useContext } from 'react'
+import { TaskCard } from './TaskCard.jsx'
+import { TaskContext } from '../context/Context.jsx'
 
-export const TaskList = ({ tasks, deleteTask }) => {
+export const TaskList = () => {
+  const { tasks, deleteTask } = useContext(TaskContext)
+
   if (tasks.length === 0) {
     return <h1>No hay tareas</h1>
   }
